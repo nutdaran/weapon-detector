@@ -184,4 +184,8 @@ Copyright © 2013 Jim Heising (https://github.com/jheising)<br/>Copyright © 201
 ref:
 https://github.com/juanjaho/real-time-object-detection-web-app/tree/master?tab=readme-ov-file
 
+https://docs.netpie.io/freeboard.html
+
+https://medium.com/realm/introduction-to-the-mongodb-realm-sync-c0534cd7702f
+
 streaming video file: .m3u8
