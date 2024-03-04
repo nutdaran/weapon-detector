@@ -180,3 +180,6 @@ $(function()
 Copyright © 2013 Jim Heising (https://github.com/jheising)<br/>Copyright © 2013 Bug Labs, Inc. (http://buglabs.net)<br/>Licensed under the **MIT** license.
 
 ---
+
+ref:
+https://github.com/juanjaho/real-time-object-detection-web-app/tree/master?tab=readme-ov-file
