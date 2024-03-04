@@ -188,4 +188,6 @@ https://docs.netpie.io/freeboard.html
 
 https://medium.com/realm/introduction-to-the-mongodb-realm-sync-c0534cd7702f
 
+https://github.com/onlinux/freeboard-plugins
+
 streaming video file: .m3u8
