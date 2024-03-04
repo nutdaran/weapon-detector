@@ -1,0 +1,103 @@
+{
+	"version": 1,
+	"allow_edit": true,
+	"plugins": [],
+	"panes": [
+		{
+			"width": 1,
+			"row": {
+				"3": 5
+			},
+			"col": {
+				"3": 1
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "",
+						"size": "regular",
+						"value": "CCTV",
+						"animate": true
+					}
+				}
+			]
+		},
+		{
+			"width": 1,
+			"row": {
+				"3": 1
+			},
+			"col": {
+				"3": 1
+			},
+			"col_width": 3,
+			"widgets": [
+				{
+					"type": "text_widget",
+					"settings": {
+						"size": "regular",
+						"value": "datasources[\"local clock\"][\"date_object\"]",
+						"animate": true
+					}
+				}
+			]
+		},
+		{
+			"width": 1,
+			"row": {
+				"3": 5
+			},
+			"col": {
+				"3": 3
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "",
+						"size": "regular",
+						"value": "ตำแหน่ง CCTV",
+						"animate": true
+					}
+				},
+				{
+					"type": "google_map",
+					"settings": {}
+				}
+			]
+		},
+		{
+			"width": 1,
+			"row": {
+				"3": 5
+			},
+			"col": {
+				"3": 2
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "text_widget",
+					"settings": {
+						"size": "regular",
+						"value": "วัตถุที่พบใน CCTV ",
+						"animate": true
+					}
+				}
+			]
+		}
+	],
+	"datasources": [
+		{
+			"name": "local clock",
+			"type": "clock",
+			"settings": {
+				"refresh": 1
+			}
+		}
+	],
+	"columns": 3
+}
