@@ -183,3 +183,5 @@ Copyright © 2013 Jim Heising (https://github.com/jheising)<br/>Copyright © 201
 
 ref:
 https://github.com/juanjaho/real-time-object-detection-web-app/tree/master?tab=readme-ov-file
+
+streaming video file: .m3u8
