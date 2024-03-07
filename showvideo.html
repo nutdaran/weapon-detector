@@ -1,18 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>video</title>
-    </head>
-    <body>
-        <video id="videoPlayer" controls autoplay>
-            <source src="video.m3u8" type="video/m3u8">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play .m3u8</title>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   Include the hls.js library
 
-            </source>
-        </video>
-        <script>
-            var video = document.getVideoById('video');
-        </script>
-    </body>
+<!-- Create a video element -->
+<video width=100% id="myVideo" autoplay muted loop></video>
+
+<!-- Use hls.js to create a player and load the .m3u8 file -->
+<script>
+  var playbackId = "eA3yjpml1HrVn62wRDeqAYDoqXprUloq";
+var url = "https://rtmp.smartway.co.th/hls/smarteye595.m3u8";
+
+var video = document.getElementById("myVideo");
+
+const native = video.canPlayType("application/vnd.apple.mpegurl");
+
+// HLS.js-specific setup code
+if (Hls.isSupported()) {
+  console.log("HLS");
+
+  var hls = new Hls({ debug: true });
+  hls.on(Hls.Events.MEDIA_ATTACHED, function() {
+    console.log("video and hls.js are now bound together !");
+
+    hls.loadSource(url);
+
+    hls.on(Hls.Events.MANIFEST_PARSED, function(event, data) {
+      console.log(
+        "manifest loaded, found " + data.levels.length + " quality level"
+      );
+
+      console.log("attempt to autoplay by manual call");
+
+      video
+        .play()
+        .then(function() {
+          console.log("video successfully autoplayed");
+        })
+        .catch(function(error) {
+          console.error(`could not play video: ${error.message}`);
+        });
+    });
+  });
+  hls.attachMedia(video);
+} else if (native) {
+  console.log("Native");
+  video.src = url;
+  video.addEventListener("canplay", function() {
+    video.play();
+  });
+}
+ 
+</script>
+
+</body>
 </html>
